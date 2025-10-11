@@ -1,0 +1,500 @@
+/* Base styles (Mobile-first) */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #f9f8f6;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo p {
+    margin: 5px 0 0;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.logo p:last-child {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.nav-toggle {
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #333;
+    left: 0;
+    transition: all .3s;
+}
+
+.nav-toggle span:nth-child(1) { top: 0; }
+.nav-toggle span:nth-child(2) { top: 10px; }
+.nav-toggle span:nth-child(3) { top: 20px; }
+
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.8;
+}
+
+.hero-text-en {
+    font-size: 12px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.commitment-section {
+    padding: 40px 0;
+    background-color: #f3f2ef;
+}
+
+.commitment-section > div:first-child {
+    height: 250px;
+    background-color: #e0e0e0;
+    margin: 0 20px;
+}
+
+.commitment-section > div:last-child {
+    padding: 40px 20px 0;
+}
+
+.commitment-item h2 {
+    font-family: serif;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.commitment-item p {
+    font-size: 14px;
+    line-height: 2;
+    color: #555;
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+}
+
+.content-section {
+    padding: 60px 20px;
+}
+
+.content-item {
+    margin-bottom: 40px;
+}
+
+.placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.content-text h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.content-text p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.menu-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 28px;
+    font-weight: normal;
+    font-family: serif;
+    margin-bottom: 10px;
+}
+
+.menu-section .subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.menu-item {
+    border-top: 1px solid #ddd;
+    padding: 30px 20px;
+    text-align: left;
+}
+
+.menu-item:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.menu-title {
+    margin-bottom: 10px;
+}
+
+.menu-title h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu-price {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.menu-description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.tags {
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.booking-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.booking-section h2 {
+    font-family: serif;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.booking-section p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.booking-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    display: block;
+}
+
+.btn-hotpepper { background-color: #bfa88c; color: white; border: none; }
+.btn-phone { background-color: #333; color: white; border: none; text-align: center;}
+.btn-line { background-color: #8fb8ac; color: white; border: none; }
+.btn-phone span { font-size: 12px; display: block; margin-top: 5px; }
+
+footer {
+    background-color: #4a4a4a;
+    color: #f0f0f0;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.map {
+    width: 100%;
+    height: 250px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
+    background-size: cover;
+    background-position: center;
+}
+
+.clinic-info {
+    width: 100%;
+    background-color: #f9f8f6;
+    color: #333;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.clinic-info h3 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.clinic-info p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.clinic-info a { color: #333; }
+
+.footer-bottom {
+    padding: 40px 20px;
+}
+
+.footer-menu {
+    margin-bottom: 30px;
+}
+
+.footer-menu h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 80px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+    }
+    
+    .hero-text-en {
+        margin-top: 0;
+    }
+
+    .commitment-section {
+        padding: 60px 40px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .commitment-section > div:first-child {
+        width: 40%;
+        height: auto;
+        align-self: stretch;
+        margin: 0;
+    }
+    
+    .commitment-section > div:last-child {
+        width: 60%;
+        padding: 0;
+    }
+
+    .content-section {
+        padding: 80px 40px;
+    }
+
+    .content-item {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .content-item:nth-child(2) {
+        justify-content: flex-end;
+    }
+    
+    .content-item:nth-child(2) .content-text {
+        order: 2;
+    }
+    
+    .content-item:nth-child(2) .placeholder {
+        order: 1;
+    }
+
+    .placeholder {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 0;
+    }
+
+    .content-text h3 {
+        writing-mode: vertical-rl;
+        margin: 0 20px 0 0;
+    }
+    
+    .menu-section {
+        padding: 80px 0;
+    }
+
+    .menu-item {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 40px;
+        align-items: start;
+        padding: 40px 0;
+    }
+    
+    .menu-placeholder {
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .booking-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .btn {
+        display: inline-block;
+    }
+
+    .footer-top {
+        flex-direction: row;
+    }
+
+    .map {
+        width: 50%;
+    }
+
+    .clinic-info {
+        width: 50%;
+        padding: 60px;
+    }
+
+    .footer-bottom {
+        padding: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
+    header {
+        padding: 20px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .commitment-section {
+        justify-content: space-around;
+    }
+    
+    .commitment-item {
+        max-width: 45%;
+    }
+
+    .content-section {
+        gap: 60px;
+    }
+    
+    .placeholder {
+        margin-right: 40px;
+    }
+    
+    .content-item:nth-child(2) .placeholder {
+        order: 3;
+        margin-left: 40px;
+        margin-right: 0;
+    }
+    
+    .content-item:nth-child(2) > div:nth-child(2) {
+        order: 1;
+    }
+    
+    .content-item:nth-child(2) .content-text {
+        order: 2;
+    }
+
+    .menu-item {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .menu-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 20px;
+    }
+
+    .menu-title h3 {
+        font-size: 18px;
+    }
+
+    .menu-price {
+        font-size: 16px;
+        margin-top: 0;
+    }
+}
