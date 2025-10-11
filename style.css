@@ -8,15 +8,23 @@ body {
     line-height: 1.8;
 }
 
-.container {
-    padding: 0 20px;
-}
-
 header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    box-sizing: border-box;
+}
+
+main {
+    /* No padding-top needed as hero section will fill the viewport */
+}
+
+.container {
+    padding: 0 20px;
 }
 
 .logo p {
@@ -51,9 +59,23 @@ header {
 .nav-toggle span:nth-child(2) { top: 10px; }
 .nav-toggle span:nth-child(3) { top: 20px; }
 
+/* Hero Section */
 .hero {
-    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.hero-top {
+    height: 50vh;
+    background: #f9f8f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .hero-text h1 {
@@ -66,6 +88,39 @@ header {
     font-size: 12px;
     color: #555;
     margin-top: 20px;
+}
+
+.hero-bottom {
+    height: 50vh;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero-slider {
+    height: 100%;
+}
+
+.hero-slider-track {
+    display: flex;
+    height: 100%;
+    width: calc(400px * 10); /* 5 images duplicated, adjust width as needed */
+    animation: slide 30s linear infinite;
+}
+
+.hero-slider-track img {
+    width: 400px; /* Adjust width as needed */
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .commitment-section {
@@ -317,12 +372,11 @@ footer {
         margin: 0 auto;
     }
 
-    .hero {
-        display: flex;
+    .hero-top {
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
         text-align: left;
-        padding: 80px 40px;
+        padding: 80px 40px 40px;
     }
 
     .hero-text h1 {
