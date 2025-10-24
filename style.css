@@ -106,12 +106,12 @@ main {
 .hero-slider-track {
     display: flex;
     height: 100%;
-    width: calc(400px * 10); /* 5 images duplicated, adjust width as needed */
+    width: calc(600px * 6); /* 3 images duplicated, adjust width as needed */
     animation: slide 30s linear infinite;
 }
 
 .hero-slider-track img {
-    width: 400px; /* Adjust width as needed */
+    width: 600px; /* Adjust width as needed */
     height: 100%;
     object-fit: cover;
 }
@@ -509,9 +509,10 @@ footer {
     }
 
     .features-section .placeholder {
-        height: auto;
+        height: auto; /* Override generic height */
         aspect-ratio: 1 / 1.2;
         margin-bottom: 0;
+        object-fit: cover; /* Crop the image to fit */
     }
     
     .menu-section {
@@ -588,8 +589,9 @@ footer {
         margin-right: 40px;
     }
     
-    .content-item--reverse .placeholder {
+    .features-section .content-item--reverse .placeholder {
         margin-right: 0;
+        margin-left: 40px;
     }
 
     .menu-item {
