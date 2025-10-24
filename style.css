@@ -163,6 +163,7 @@ main {
     padding-bottom: 2px;
 }
 
+/* Generic Content Section Styles */
 .content-section {
     padding: 60px 20px;
 }
@@ -187,6 +188,43 @@ main {
 .content-text p {
     font-size: 14px;
     line-height: 2;
+}
+
+/* Scoped Feature Section Styles */
+.features-section {
+    padding: 60px 20px;
+}
+
+.features-section .content-paragraphs h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.features-section .content-body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+
+.features-section .content-text h3 {
+    writing-mode: vertical-rl;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    white-space: nowrap;
+    color: #888;
+}
+
+.features-section .content-row {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.features-section .content-item-full-width {
+    margin-top: 40px;
 }
 
 .menu-section {
@@ -414,34 +452,49 @@ footer {
         padding: 80px 40px;
     }
 
-    .content-item {
+    .features-section .content-row {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .features-section .content-item {
+        width: calc(50% - 20px);
+    }
+
+    .features-section .content-item .placeholder {
+        width: 100%;
+    }
+
+    .features-section .content-item .content-body {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .features-section .content-item--reverse {
+        /* No special flex direction needed here */
+    }
+
+    .features-section .content-item-full-width {
         display: flex;
-        align-items: center;
-        gap: 30px;
-        margin-bottom: 60px;
-    }
-    
-    .content-item:nth-child(2) {
-        justify-content: flex-end;
-    }
-    
-    .content-item:nth-child(2) .content-text {
-        order: 2;
-    }
-    
-    .content-item:nth-child(2) .placeholder {
-        order: 1;
+        gap: 40px;
+        align-items: flex-start;
+        margin-top: 80px;
     }
 
-    .placeholder {
-        width: 200px;
-        height: 200px;
+    .features-section .content-item-full-width .placeholder {
+        width: 40%;
+        flex-shrink: 0;
+    }
+
+    .features-section .content-item-full-width .content-body {
+        width: 60%;
+    }
+
+    .features-section .placeholder {
+        height: auto;
+        aspect-ratio: 1 / 1.2;
         margin-bottom: 0;
-    }
-
-    .content-text h3 {
-        writing-mode: vertical-rl;
-        margin: 0 20px 0 0;
     }
     
     .menu-section {
@@ -518,18 +571,8 @@ footer {
         margin-right: 40px;
     }
     
-    .content-item:nth-child(2) .placeholder {
-        order: 3;
-        margin-left: 40px;
+    .content-item--reverse .placeholder {
         margin-right: 0;
-    }
-    
-    .content-item:nth-child(2) > div:nth-child(2) {
-        order: 1;
-    }
-    
-    .content-item:nth-child(2) .content-text {
-        order: 2;
     }
 
     .menu-item {
