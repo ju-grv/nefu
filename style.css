@@ -201,12 +201,15 @@ main {
     margin-bottom: 1em;
 }
 
-.features-section .content-body {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 20px;
-}
+    .features-section .content-body {
+        /* This is now just a container for paragraphs in the full-width item */
+    }
 
+    .features-section .content-row .content-body {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+    }
 .features-section .content-text h3 {
     writing-mode: vertical-rl;
     margin: 0;
@@ -456,9 +459,18 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         gap: 40px;
+        /* align-items: center; */ /* Removed for better transform control */
     }
 
-    .features-section .content-item {
+    .features-section .content-row > .content-item:nth-child(1) {
+        transform: translateY(-40px);
+    }
+
+    .features-section .content-row > .content-item:nth-child(2) {
+        transform: translateY(40px);
+    }
+
+    .features-section .content-row .content-item {
         width: calc(50% - 20px);
     }
 
@@ -479,16 +491,21 @@ footer {
         display: flex;
         gap: 40px;
         align-items: flex-start;
-        margin-top: 80px;
+        margin: 80px auto 0;
+        max-width: 90%; /* Center the component */
     }
 
     .features-section .content-item-full-width .placeholder {
-        width: 40%;
+        width: 50%; /* Increased image size */
         flex-shrink: 0;
     }
 
+    .features-section .content-item-full-width .content-text {
+        flex-shrink: 0; /* Prevent title from shrinking */
+    }
+
     .features-section .content-item-full-width .content-body {
-        width: 60%;
+        width: auto; /* Take remaining space */
     }
 
     .features-section .placeholder {
