@@ -488,20 +488,21 @@ footer {
     }
 
     .features-section .content-item-full-width {
-        display: flex;
+        display: grid;
+        grid-template-columns: 50% auto 1fr; /* Image, Title, Text */
         gap: 40px;
-        align-items: flex-start;
+        align-items: stretch; /* Make items same height */
         margin: 80px auto 0;
         max-width: 90%; /* Center the component */
     }
 
+    /* The placeholder for the full-width item should not have a fixed aspect ratio */
     .features-section .content-item-full-width .placeholder {
-        width: 50%; /* Increased image size */
-        flex-shrink: 0;
+        aspect-ratio: unset; /* Let the grid row determine the height */
     }
 
     .features-section .content-item-full-width .content-text {
-        flex-shrink: 0; /* Prevent title from shrinking */
+        flex-shrink: 0; /* Prevent title from shrinking - this is a flex property, but harmless in grid */
     }
 
     .features-section .content-item-full-width .content-body {
@@ -512,8 +513,15 @@ footer {
         height: auto; /* Override generic height */
         aspect-ratio: 1 / 1.2;
         margin-bottom: 0;
+        overflow: hidden; /* Add overflow hidden */
+    }
+
+    .features-section .placeholder img {
+        width: 100%;
+        height: 100%;
         object-fit: cover; /* Crop the image to fit */
     }
+
     
     .menu-section {
         padding: 80px 0;
