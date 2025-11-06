@@ -9,17 +9,7 @@
 <body>
     <header>
         <div class="logo">
-            <!-- Inlined SVG for the logo -->
-            <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(10, 10)">
-                <path d="M40,0 C17.9,0 0,17.9 0,40 C0,62.1 17.9,80 40,80 C62.1,80 80,62.1 80,40 C80,17.9 62.1,0 40,0 Z M40,76 C20.1,76 4,59.9 4,40 C4,20.1 20.1,4 40,4 C59.9,4 76,20.1 76,40 C76,59.9 59.9,76 40,76 Z" fill="none" stroke="#000" stroke-width="2"/>
-                <path d="M25,25 C35,15 45,15 55,25" fill="none" stroke="#000" stroke-width="2"/>
-                <path d="M25,55 C35,65 45,65 55,55" fill="none" stroke="#000" stroke-width="2"/>
-                <line x1="40" y1="20" x2="40" y2="60" stroke="#000" stroke-width="2"/>
-              </g>
-            </svg>
-            <p style="margin: 5px 0 0; letter-spacing: 2px;">寝 譜</p>
-            <p style="margin: 0; font-size: 12px; letter-spacing: 1px;">nefu</p>
+            <img src="assets/images/logo.webp" alt="寝譜 nefu ロゴ">
         </div>
         <div class="nav-toggle">
             <span></span>
@@ -27,6 +17,16 @@
             <span></span>
         </div>
     </header>
+
+    <div class="drawer-menu">
+        <nav>
+            <ul>
+                <li><a href="#features">コンセプト</a></li>
+                <li><a href="#menu">メニュー</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <section class="hero">
@@ -41,13 +41,13 @@
             <div class="hero-bottom">
                 <div class="hero-slider">
                     <div class="hero-slider-track">
-                        <img src="assets/images/1.jpg" alt="Hero Image 1">
-                        <img src="assets/images/2.jpg" alt="Hero Image 2">
-                        <img src="assets/images/3.jpg" alt="Hero Image 3">
+                        <img src="assets/images/1.webp" alt="Hero Image 1">
+                        <img src="assets/images/2.webp" alt="Hero Image 2">
+                        <img src="assets/images/3.webp" alt="Hero Image 3">
                         <!-- Duplicates -->
-                        <img src="assets/images/1.jpg" alt="Hero Image 1">
-                        <img src="assets/images/2.jpg" alt="Hero Image 2">
-                        <img src="assets/images/3.jpg" alt="Hero Image 3">
+                        <img src="assets/images/1.webp" alt="Hero Image 1">
+                        <img src="assets/images/2.webp" alt="Hero Image 2">
+                        <img src="assets/images/3.webp" alt="Hero Image 3">
                     </div>
                 </div>
             </div>
@@ -55,16 +55,7 @@
 
         <section class="commitment-section">
             <div class="commitment-slider">
-                <div class="slides">
-                    <img src="assets/images/4.JPG" alt="Commitment Image 1" class="slide active">
-                    <img src="assets/images/4.JPG" alt="Commitment Image 2" class="slide">
-                    <img src="assets/images/4.JPG" alt="Commitment Image 3" class="slide">
-                </div>
-                <div class="dots">
-                    <span class="dot active" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
-                </div>
+                <img src="assets/images/4.webp" alt="Commitment Image 1" class="slide active">
             </div>
             <div style="width:60%; padding-left: 5%;">
                 <div class="commitment-item">
@@ -78,11 +69,11 @@
             </div>
         </section>
 
-        <section class="container features-section">
+        <section class="container features-section" id="features">
             <div class="content-row">
                 <div class="content-item">
                     <div class="placeholder">
-                        <img src="assets/images/5.jpg" alt="美容鍼">
+                        <img src="assets/images/2.webp" alt="美容鍼">
                     </div>
                     <div class="content-body">
                         <div class="content-paragraphs">
@@ -98,7 +89,7 @@
                 </div>
                  <div class="content-item content-item--reverse">
                     <div class="placeholder">
-                        <img src="assets/images/6.jpg" alt="リラクゼーション">
+                        <img src="assets/images/6.webp" alt="リラクゼーション">
                     </div>
                     <div class="content-body">
                         <div class="content-paragraphs">
@@ -115,7 +106,7 @@
             </div>
              <div class="content-item content-item-full-width">
                 <div class="placeholder">
-                    <img src="assets/images/7.JPG" alt="空間">
+                    <img src="assets/images/7.webp" alt="空間">
                 </div>
                 <div class="content-text">
                     <h3>空間</h3>
@@ -132,12 +123,12 @@
         </section>
 
 
-        <section class="menu-section container">
+        <section class="menu-section container" id="menu">
             <h2>menu</h2>
             <p class="subtitle">すべてのコースはお化粧をしたまま受けていただけます。</p>
 
             <div class="menu-item">
-                <img src="assets/images/8.jpg" alt="ベーシックリフト美容鍼" class="menu-placeholder">
+                <img src="assets/images/2.webp" alt="ベーシックリフト美容鍼" class="menu-placeholder">
                 <div>
                     <div class="menu-title">
                         <h3>● ベーシックリフト美容鍼 [初めての方におすすめ]</h3>
@@ -158,7 +149,7 @@
             </div>
 
             <div class="menu-item">
-                <img src="assets/images/9.jpg" alt="ベーシックリフト美容鍼＋寝落ちヘッドスパ" class="menu-placeholder">
+                <img src="assets/images/9.webp" alt="ベーシックリフト美容鍼＋寝落ちヘッドスパ" class="menu-placeholder">
                 <div>
                     <div class="menu-title">
                         <h3>● ベーシックリフト美容鍼＋寝落ちヘッドスパ</h3>
@@ -181,7 +172,7 @@
             </div>
 
             <div class="menu-item">
-                <img src="assets/images/10.jpg" alt="ベーシックリフト美容鍼＋肩甲骨はがし/猫背矯正" class="menu-placeholder">
+                <img src="assets/images/6.webp" alt="ベーシックリフト美容鍼＋肩甲骨はがし/猫背矯正" class="menu-placeholder">
                 <div>
                     <div class="menu-title">
                         <h3>● ベーシックリフト美容鍼＋肩甲骨はがし/猫背矯正</h3>
@@ -266,86 +257,51 @@
             </div>
         </section>
 
-        <section class="booking-section">
+        <section class="booking-section" id="contact">
             <h2>Improve together</h2>
             <p>寝譜 nefu は<br>お客様に誠実に向きあい結果を出します。<br>鏡を見て、少しでも嬉しい気持ちになれますように。</p>
             <div class="booking-buttons">
-                <a href="#" class="btn btn-hotpepper">Hotpepper 予約</a>
-                <a href="tel:000-0000-0000" class="btn btn-phone">Free Dial 000-0000-0000<span>受付時間：10:00〜18:00</span></a>
-                <a href="#" class="btn btn-line">LINE</a>
+                <a href="https://beauty.hotpepper.jp/kr/slnH000777827/" class="btn btn-hotpepper">Hot pepper 予約</a>
+                <a href="tel:000-0000-0000" class="btn btn-phone"><div>Free Dial 000-0000-0000</div><span>受付時間：10:00〜18:30</span></a>
+                <a href="https://lin.ee/5q3qE6H" class="btn btn-line">LINE</a>
             </div>
         </section>
     </main>
 
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13122.852199383235!2d135.4929009871582!3d34.68719099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e792c21a9127%3A0xcabb64e94f88a8e0!2z5a-d6K2cIG5lZnUg44CUIOe-juWuuemNvOOBqOODquODqeOCr-OCvOODvOOCt-ODp-ODsyDjgJU!5e0!3m2!1sja!2sjp!4v1762255926650!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     <footer>
-        <div class="footer-top">
-            <div class="map"><!-- Map image would be here --></div>
-            <div class="clinic-info">
-                 <h3>KYU EN CLINIC</h3>
-                 <p>完全予約制</p>
-                 <p>Open 10:00〜19:00 (平日)<br>10:00〜19:00 (土日祝)</p>
-                 <p>Address 〒107-0062<br>東京都港区南青山3丁目3-3<br>リビエラ南青山 <a href="#">アクセス</a></p>
-                 <p>Free Dial 0120-201-876 (受付: 10:00〜19:00)</p>
-                 <p>Mail info@kyuenclinic.com</p>
-            </div>
-        </div>
         <div class="footer-bottom">
-            <div class="footer-menu">
-                <h4>Treatment Menu</h4>
-                <ul>
-                    <li><a href="#">美容皮膚科</a></li>
-                    <li><a href="#">肌質改善(メソガン)</a></li>
-                    <!-- ... other items -->
-                </ul>
+            <div class="clinic-info">
+                 <div class="logo">
+                    <img src="assets/images/logo.webp" alt="寝譜 nefu ロゴ">
+                </div>
+                 <dl>
+                    <dt>Open</dt>
+                    <dd>10:00〜18:30 (平日)<br>10:00〜18:30 (土日祝)</dd>
+                    <dt>Address</dt>
+                    <dd>〒540-0037<br>大阪府大阪市中央区内平野町2丁目3番5号<br>MD内平野ビル8階</dd>
+                    <dt>Free Dial</dt>
+                    <dd>0000-000-000 (受付: 10:00〜18:30)</dd>
+                 </dl>
+                 <div class="social-icons">
+                    <a href="https://www.instagram.com/nefu_biyoubari/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+    </svg></a>
+                    <a href="https://lin.ee/5q3qE6H">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M9,4c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM25,11c8.27,0 15,5.35922 15,11.94922c0,2.63 -1.0407,5.01156 -3.2207,7.35156c-1.57,1.78 -4.11875,3.73938 -6.46875,5.35938c-2.35,1.6 -4.51055,2.85945 -5.31055,3.18945c-0.32,0.13 -0.56,0.18945 -0.75,0.18945c-0.66,0 -0.60078,-0.69828 -0.55078,-0.98828c0.04,-0.22 0.2207,-1.26172 0.2207,-1.26172c0.05,-0.37 0.09922,-0.95813 -0.05078,-1.32812c-0.17,-0.41 -0.84008,-0.6207 -1.33008,-0.7207c-7.2,-0.94 -12.53906,-5.89101 -12.53906,-11.79102c0,-6.59 6.73,-11.94922 15,-11.94922zM23.99219,18.99805c-0.50381,0.00935 -0.99219,0.39383 -0.99219,1.00195v6c0,0.552 0.448,1 1,1c0.552,0 1,-0.448 1,-1v-2.87891l2.18555,3.45898c0.566,0.792 1.81445,0.39292 1.81445,-0.58008v-6c0,-0.552 -0.448,-1 -1,-1c-0.552,0 -1,0.448 -1,1v3l-2.18555,-3.58008c-0.21225,-0.297 -0.51998,-0.42748 -0.82227,-0.42187zM15,19c-0.552,0 -1,0.448 -1,1v6c0,0.552 0.448,1 1,1h3c0.552,0 1,-0.448 1,-1c0,-0.552 -0.448,-1 -1,-1h-2v-5c0,-0.552 -0.448,-1 -1,-1zM21,19c-0.552,0 -1,0.448 -1,1v6c0,0.552 0.448,1 1,1c0.552,0 1,-0.448 1,-1v-6c0,-0.552 -0.448,-1 -1,-1zM31,19c-0.552,0 -1,0.448 -1,1v6c0,0.552 0.448,1 1,1h3c0.552,0 1,-0.448 1,-1c0,-0.552 -0.448,-1 -1,-1h-2v-1h2c0.553,0 1,-0.448 1,-1c0,-0.552 -0.447,-1 -1,-1h-2v-1h2c0.552,0 1,-0.448 1,-1c0,-0.552 -0.448,-1 -1,-1z"></path></g></g>
+</svg>
+                    </a>
+                </div>
             </div>
-            <div class="footer-menu">
-                <h4>ドクター施術</h4>
-                 <ul>
-                    <li><a href="#">リジェン</a></li>
-                    <li><a href="#">ジョベルック</a></li>
-                    <!-- ... other items -->
-                </ul>
-            </div>
-            <div class="footer-menu">
-                 <h4>物販アイテム</h4>
-                 <ul>
-                    <li><a href="#">CARE + TEA + AROMA (ケアテア)</a></li>
-                    <li><a href="#">ゼオスキン</a></li>
-                    <!-- ... other items -->
-                </ul>
-            </div>
-            <div class="footer-menu">
-                 <h4>About</h4>
-                 <ul>
-                    <li><a href="#">コンセプト</a></li>
-                    <li><a href="#">クリニック紹介</a></li>
-                    <!-- ... other items -->
-                </ul>
-            </div>
-            <div class="footer-menu">
-                 <h4>Online Store</h4>
-                 <ul>
-                    <li><a href="#">オンラインストア</a></li>
-                    <li><a href="#">TOP</a></li>
-                    <!-- ... other items -->
-                </ul>
-                <h4>Blog</h4>
-                <ul>
-                    <li><a href="#">ブログ</a></li>
-                    <!-- ... other items -->
-                </ul>
-            </div>
-            <div class="footer-menu">
-                 <h4>Special</h4>
-                 <ul>
-                    <li><a href="#">オンライン診療(予約)</a></li>
-                    <li><a href="#">eGift</a></li>
-                    <!-- ... other items -->
-                </ul>
+             <div class="copyright">
+                <p>© nefu. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
+        
     <script src="script.js"></script>
 </body>
 </html>

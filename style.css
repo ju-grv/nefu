@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 10;
     display: flex;
@@ -17,14 +17,19 @@ header {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    background-color: transparent;
 }
 
 main {
-    /* No padding-top needed as hero section will fill the viewport */
+    padding-top: 90px;
 }
 
 .container {
     padding: 0 20px;
+}
+
+header .logo img {
+    max-height: 90px;
 }
 
 .logo p {
@@ -43,6 +48,7 @@ main {
     height: 22px;
     position: relative;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .nav-toggle span {
@@ -106,12 +112,12 @@ main {
 .hero-slider-track {
     display: flex;
     height: 100%;
-    width: calc(600px * 6); /* 3 images duplicated, adjust width as needed */
+    width: calc(100% * 6); /* 3 images duplicated */
     animation: slide 30s linear infinite;
 }
 
 .hero-slider-track img {
-    width: 600px; /* Adjust width as needed */
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -132,7 +138,7 @@ main {
 
 .commitment-slider {
     position: relative;
-    margin: 0 20px;
+    margin: 0 auto;
     aspect-ratio: 1 / 1;
 }
 
@@ -172,11 +178,17 @@ main {
     margin-bottom: 40px;
 }
 
-.placeholder {
+.placeholder, .menu-placeholder {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16 / 9;
     background-color: #e0e0e0;
     margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.placeholder img, .menu-placeholder img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .content-text h3 {
@@ -259,13 +271,6 @@ main {
     border-bottom: 1px solid #ddd;
 }
 
-.menu-placeholder {
-    width: 100%;
-    height: 200px;
-    background-color: #e0e0e0;
-    margin-bottom: 20px;
-}
-
 .menu-title {
     margin-bottom: 10px;
 }
@@ -302,21 +307,23 @@ main {
 }
 
 .booking-section {
-    padding: 60px 20px;
+    position: relative; /* For pseudo-element positioning */
+    padding: 80px 20px;
     text-align: center;
+    overflow: hidden; /* To contain the pseudo-element */
 }
 
 .booking-section h2 {
     font-family: serif;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
 .booking-section p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 2;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .booking-buttons {
@@ -326,12 +333,25 @@ main {
 }
 
 .btn {
-    padding: 15px 20px;
+    padding: 20px;
     text-decoration: none;
     color: #333;
     border: 1px solid #ccc;
-    font-size: 14px;
-    display: block;
+    font-size: 16px; /* Default font size */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    transition: background-color 0.3s;
+}
+
+.btn-phone {
+    flex-direction: column;
+    line-height: 1.5; /* Adjust line height for two lines */
+}
+
+.btn-hotpepper,
+.btn-line {
+    font-size: 24px; /* Larger font size for single-line buttons */
 }
 
 .btn-hotpepper { background-color: #bfa88c; color: white; border: none; }
@@ -344,25 +364,48 @@ footer {
     color: #f0f0f0;
 }
 
-.footer-top {
-    display: flex;
-    flex-direction: column;
-}
-
 .map {
     width: 100%;
-    height: 250px;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
-    background-size: cover;
-    background-position: center;
+    height: 400px; /* Adjust height as needed */
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .clinic-info {
-    width: 100%;
-    background-color: #f9f8f6;
+    background-color: #FFFFFF;
     color: #333;
-    padding: 40px 20px;
-    box-sizing: border-box;
+    padding: 40px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.clinic-info .logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.clinic-info .logo img {
+    max-height: 100px;
+}
+
+.clinic-info dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+}
+
+.clinic-info dt {
+    font-weight: bold;
+    grid-column: 1;
+}
+
+.clinic-info dd {
+    grid-column: 2;
+    margin: 0;
 }
 
 .clinic-info h3 {
@@ -378,34 +421,31 @@ footer {
 
 .clinic-info a { color: #333; }
 
-.footer-bottom {
-    padding: 40px 20px;
-}
-
-.footer-menu {
-    margin-bottom: 30px;
-}
-
-.footer-menu h4 {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-menu li {
-    margin-bottom: 10px;
-}
-
-.footer-menu a {
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
     color: #f0f0f0;
-    text-decoration: none;
-    font-size: 12px;
+}
+
+.clinic-info .social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.clinic-info .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.clinic-info .social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+.footer-bottom {
+    padding: 40px 20px 0px 20px;
 }
 
 /* Tablet styles */
@@ -544,31 +584,23 @@ footer {
         flex-direction: row;
         justify-content: center;
         gap: 20px;
+        max-width: 800px; /* Constrain the max width */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .booking-buttons .btn {
+        flex: 1; /* Make all buttons equal width */
     }
     
     .btn {
         display: inline-block;
     }
 
-    .footer-top {
-        flex-direction: row;
-    }
-
-    .map {
-        width: 50%;
-    }
-
-    .clinic-info {
-        width: 50%;
-        padding: 60px;
-    }
-
     .footer-bottom {
-        padding: 60px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
+        padding: 60px 60px 0px 60px;
     }
+
+
 }
 
 /* Desktop styles */
@@ -621,49 +653,67 @@ footer {
         font-size: 16px;
         margin-top: 0;
     }
+
+    .drawer-menu {
+        width: 30%;
+    }
 }
 
-/* Commitment Slider Details */
-.commitment-slider .slides {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.commitment-slider .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+.commitment-slider img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
-.commitment-slider .slide.active {
-    opacity: 1;
-}
-
-.commitment-slider .dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.commitment-slider .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.drawer-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100%;
     background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    z-index: 1;
+    transition: right 0.3s ease-in-out;
+    padding-top: 80px;
+    box-sizing: border-box;
 }
 
-.commitment-slider .dot.active {
-    background-color: #333;
+.drawer-menu.is-active {
+    right: 0;
+}
+
+.drawer-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drawer-menu nav li {
+    border-bottom: 1px solid #eee;
+}
+
+.drawer-menu nav a {
+    display: block;
+    padding: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+body.drawer-open {
+    overflow: hidden;
+}
+
+.nav-toggle.is-active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.is-active span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
 }

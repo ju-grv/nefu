@@ -1,47 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Commitment slider
-    const slidesContainer = document.querySelector('.commitment-slider');
-    if (slidesContainer) {
-        const slides = slidesContainer.querySelectorAll('.slide');
-        const dots = slidesContainer.querySelectorAll('.dot');
-        let currentSlide = 0;
-        let slideInterval;
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const drawerMenu = document.querySelector('.drawer-menu');
+    const body = document.querySelector('body');
+    const drawerLinks = document.querySelectorAll('.drawer-menu a');
 
-        function showSlide(n) {
-            slides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === n);
-            });
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === n);
-            });
-            currentSlide = n;
-        }
-
-        function nextSlide() {
-            let next = (currentSlide + 1) % slides.length;
-            showSlide(next);
-        }
-
-        function startSlideShow() {
-            slideInterval = setInterval(nextSlide, 3000); // Change image every 3 seconds
-        }
-
-        function stopSlideShow() {
-            clearInterval(slideInterval);
-        }
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                stopSlideShow();
-                showSlide(parseInt(dot.dataset.slide));
-                startSlideShow(); // Restart interval after manual selection
-            });
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('is-active');
+            drawerMenu.classList.toggle('is-active');
+            body.classList.toggle('drawer-open');
         });
-
-        // Initialize slider
-        if (slides.length > 0) {
-            showSlide(0);
-            startSlideShow();
-        }
     }
+
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            navToggle.classList.remove('is-active');
+            drawerMenu.classList.remove('is-active');
+            body.classList.remove('drawer-open');
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!drawerMenu.contains(event.target) && !navToggle.contains(event.target) && drawerMenu.classList.contains('is-active')) {
+            navToggle.classList.remove('is-active');
+            drawerMenu.classList.remove('is-active');
+            body.classList.remove('drawer-open');
+        }
+    });
+
 });
